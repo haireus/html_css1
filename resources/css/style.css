@@ -73,11 +73,12 @@ h1 {
     letter-spacing: 1px;
 }
 h2 {
-    font-size: 100%;
+    font-size: 110%;
     word-spacing: 2px;
     text-align: center;
     margin-bottom: 30px;
     letter-spacing: 1px;
+    
 
 }
 
@@ -112,7 +113,7 @@ h2:after {
 
 /*----------- ICONS----------- */
 
-ion-icon {
+.section-features ion-icon {
     font-size: 350%;
     display: block;
     color: #e67e22;
@@ -122,7 +123,8 @@ ion-icon {
 
 /* ---------------BUTTONS-------------------- */
 .btn:link, 
-.btn:visited {
+.btn:visited,
+input[type=submit] {
     display: inline-block;
     padding: 10px 30px;
     font-weight: 300;
@@ -135,7 +137,8 @@ ion-icon {
 
 
 .btn-full:link,
-.btn-full:visited {
+.btn-full:visited,
+input[type=submit] {
     background-color: #e67e22;
     
     border: 1px solid #e67e22;
@@ -155,12 +158,16 @@ ion-icon {
 }
 
 .btn:hover,
-.btn:active {
+.btn:active,
+input[type=submit]:hover,
+input[type=submit]:active
+ {
     background-color:#0097e6;
 }
 
 .btn-full:hover,
-.btn-full:active {
+.btn-full:active,
+input[type=submit] {
     border: 1px solid #cf6d17;
 }
 
@@ -179,6 +186,7 @@ header {
     height: 100vh;
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
 }
 
 .hero-text-box {
@@ -277,7 +285,9 @@ header {
 /* HOW IT WORKS*/
 /* -------------------------------------- */
 
-
+.section-steps {
+    background-color: rgba(241, 236, 236, 0.911);
+}
 
 .steps-box:first-child{
     text-align: right;
@@ -322,9 +332,296 @@ header {
     margin-right: 25px;
 }
 
+.button-app:link,
+.button-app:visited{
+    border: 0;
+}
 .button-app img {
     height: 50px;
     width: auto;
     margin-right: 10px;
 
 }
+
+
+/* -------------------------------------- */
+/* CITIES*/
+/* -------------------------------------- */
+
+.box img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+
+}
+
+.city-features {
+    margin-bottom: 5px;
+
+}
+
+.section-cities ion-icon {
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    color: #e67e22;
+    font-size: 120%;
+    margin-right:10px ;
+
+    /* secrets to align text and icons */
+    line-height: 1205;
+    vertical-align: middle;
+    margin-top: -5px;
+
+    
+} 
+
+/* LINKS */
+
+.section-cities a:link,
+.section-cities a:visited {
+    color: #e67e22;
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #e67e22;
+    transition :border-bottom 0.2s, color 0.2s;
+
+}
+
+.section-cities a:hover,
+.section-cities a:active {
+    color: #555;
+    border-bottom: 1px solid transparent;
+}
+
+
+/* -------------------------------------- */
+/* TESTIMONIALS*/
+/* -------------------------------------- */
+
+.section-testimonials {
+    background-image:linear-gradient(rgba(0, 0, 0, 0.741),rgba(0, 0, 0, 0.802)) ,url(img/back-customers.jpg);
+    background-size: cover;
+    color: #fff;
+    background-attachment: fixed;
+    
+
+}
+
+blockquote {
+    padding: 2%;
+    font-style: italic;
+    line-height: 145%;
+    position: relative;
+    margin-top: 40px;
+
+}
+
+cite {
+    font-size: 90%;
+    margin-top: 45px;
+    display: block;
+
+}
+
+blockquote::before {
+    content: "\201C";
+    font-size: 500%;
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+}
+
+cite img {
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+
+}
+
+
+
+/* -------------------------------------- */
+/* SIGN UP*/
+/* -------------------------------------- */
+.section-plans {
+    background-color: #f4f4f4;
+
+}
+
+.plan-box {
+    background-color: #fff;
+    border-radius: 5px;
+    width: 90%;
+    margin-left: 5%;
+    box-shadow: 0px 2px 2px rgb(209, 208, 208);
+
+}
+
+.plan-box div {
+    padding: 15px;
+    border-bottom: 1px solid rgb(209, 208, 208);
+}
+
+.plan-box div:first-child{
+    background-color: rgb(214, 211, 211);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.plan-box div:last-child{
+    text-align: center;
+    border-bottom: none;
+}
+.plan-price{
+    font-size: 300%;
+    margin-bottom: 10px;
+    font-weight: 100;
+}
+.plan-price span {
+    font-size: 30%;
+    font-weight: 300;
+    color: #e67e22;
+}
+.plan-price-meal {
+    font-size: 80%;
+
+}
+
+.plan-box ul {
+    list-style: none;
+
+}
+ .plan-box ul li {
+     padding: 5px 0px;
+
+ }
+
+ .plan-box ul li ion-icon {
+     color: #e67e22;
+     font-size: 80%;
+    
+ }
+
+
+ /* -------------------------------------- */
+/* FORM*/
+/* -------------------------------------- */
+
+.contact-form {
+    width: 60%;
+    margin: 0 auto;
+
+}
+
+input[type=text],
+input[type=email],
+select,
+textarea {
+    width: 100%;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+
+}
+
+textarea {
+    height: 100px;
+}
+
+input[type=checkbox] {
+    margin: 10px 5px 10px 0px;
+
+}
+
+*:focus {
+    outline: none;
+}
+
+ /* -------------------------------------- */
+/* FOOTER*/
+/* -------------------------------------- */
+
+footer {
+    background-color: rgb(69, 68, 68);
+    padding: 60px;
+}
+
+.footer-nav{
+    list-style: none;
+    float: left;
+}
+
+.social-links{
+    list-style: none;
+    float :right;
+}
+
+.footer-nav li,
+.social-links li {
+    display: inline-block;
+    margin-right: 20px;
+
+}
+
+.footer-nav li:last-child,
+.social-links li:last-child{
+    margin: 0;
+} 
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited {
+    text-decoration:none;
+    border: 0;
+    color: #888;
+    transition: color 0.2s;
+
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active
+ {
+    color:#ddd;
+
+} 
+
+.social-links li a:link,
+.social-link li a:visited{
+    font-size: 180%;
+}
+
+.social-links li ion-icon {
+    transition: color 0.2s;
+}
+
+#facebook ion-icon:hover{
+    color: #3b5998;
+}
+
+#twitter ion-icon:hover{
+    color:#55acee;
+}
+
+#google ion-icon:hover{
+    color: #dd4b39;
+}
+
+#instagram ion-icon:hover{
+    color: #8a3ab9;
+}
+
+
+footer p{
+    color: #888;
+    text-align: center;
+    font-size: 90%;
+    margin-top: 30px;
+    
+
+}
+
+
